@@ -64,10 +64,10 @@ function TreatmentPetal({
       }}
     >
       <div
-        className="flex h-full w-full flex-col items-center justify-start gap-1.5 rounded-[999px] border border-white/45 px-2 pt-2.5 pb-3 shadow-[0_6px_28px_rgba(0,0,0,0.25)] backdrop-blur-md sm:gap-2 sm:px-2.5 sm:pt-3"
+        className="flex h-full w-full flex-col items-center justify-start gap-1.5 rounded-[999px] border border-white/45 px-2 pt-2.5 pb-3 shadow-[0_6px_28px_rgba(13,95,98,0.35)] backdrop-blur-md sm:gap-2 sm:px-2.5 sm:pt-3"
         style={{
           background:
-            "linear-gradient(180deg, rgba(255,255,255,0.32) 0%, rgba(130,105,85,0.55) 100%)",
+            "linear-gradient(180deg, rgba(255,255,255,0.35) 0%, rgba(18,131,134,0.58) 100%)",
         }}
       >
         <div className="relative h-8 w-8 shrink-0 overflow-hidden rounded-full ring-2 ring-white/70 sm:h-9 sm:w-9">

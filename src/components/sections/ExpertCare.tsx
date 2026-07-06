@@ -41,9 +41,9 @@ export function ExpertCare() {
         <div className="mt-16 flex flex-col items-center gap-8 md:flex-row md:justify-center">
           <div className="flex items-center gap-2">
             <span className="text-3xl font-semibold">5.0</span>
-            <Star className="h-6 w-6 fill-gold text-gold" />
+            <Star className="h-6 w-6 fill-[#fbbc04] text-[#fbbc04]" />
           </div>
-          <p className="text-warm-gray">86+ Reviews from clients</p>
+          <p className="text-warm-gray">5-star rated on Google</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">

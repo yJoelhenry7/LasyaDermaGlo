@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { createMetadata } from "@/lib/seo";
 import "./globals.css";
 
 const inter = Inter({
@@ -14,11 +15,7 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
-export const metadata: Metadata = {
-  title: "Derma Glo | Advanced Dermatology & Aesthetic Treatments",
-  description:
-    "Healthy, confident skin starts here. Advanced dermatology and modern aesthetic treatments in Rajahmundry.",
-};
+export const metadata: Metadata = createMetadata({});
 
 export default function RootLayout({
   children,

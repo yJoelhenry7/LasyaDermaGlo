@@ -49,7 +49,7 @@ export function Hero() {
         />
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/45" />
-        <div className="absolute inset-0 bg-sage-dark/15 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-sage/10 mix-blend-multiply" />
 
         <div className="relative z-10 flex h-full min-h-[inherit] flex-col">
           <div className="flex flex-1 flex-col items-center justify-start px-4 pt-10 text-center sm:px-8 sm:pt-14 md:pt-20">

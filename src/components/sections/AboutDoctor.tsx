@@ -2,71 +2,63 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Check, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { clinicValues } from "@/data/site";
+import { doctor } from "@/data/site";
 
 export function AboutDoctor() {
   return (
-    <section className="py-20 md:py-28">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative aspect-[4/5] overflow-hidden rounded-2xl"
-          >
-            <Image
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80"
-              alt="Dr. Lasya"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </motion.div>
+    <section className="py-16 md:py-24">
+      <div className="mx-auto max-w-5xl px-6">
+        <p className="text-center text-xs font-medium tracking-[0.2em] text-sage uppercase sm:text-sm">
+          Lead Dermatologist
+        </p>
 
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="font-display text-3xl font-medium text-charcoal md:text-4xl">
-              Dr. Lasya
-            </h2>
-            <p className="mt-2 text-sage">Dermatologist & Aesthetic Specialist</p>
-
-            <div className="mt-6 flex items-center gap-2 text-sm text-warm-gray">
-              <Sparkles className="h-4 w-4 text-gold" />
-              Excellence in skin care
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mt-8 overflow-hidden rounded-2xl border border-cream-dark bg-surface shadow-sm"
+        >
+          <div className="flex flex-col sm:flex-row">
+            <div className="relative mx-auto aspect-[3/4] w-full max-w-[240px] shrink-0 sm:mx-0 sm:max-w-none sm:w-52 md:w-60">
+              <Image
+                src={doctor.image}
+                alt={doctor.name}
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 640px) 240px, 240px"
+              />
             </div>
 
-            <h3 className="font-display mt-8 text-2xl font-medium text-charcoal">
-              A clinic committed
-            </h3>
-            <p className="mt-4 leading-relaxed text-warm-gray">
-              We believe good skin starts with understanding. Every treatment
-              begins with a detailed consultation, a long-term plan, and
-              science-backed care.
-            </p>
+            <div className="flex flex-1 flex-col justify-center border-t border-cream-dark p-7 sm:border-t-0 sm:border-l sm:p-8 md:p-10">
+              <h2 className="font-display text-2xl font-medium text-charcoal md:text-3xl">
+                {doctor.name}
+              </h2>
+              <p className="mt-2 text-base text-sage">{doctor.title}</p>
 
-            <ul className="mt-8 space-y-4">
-              {clinicValues.map((value) => (
-                <li key={value} className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-sage" />
-                  <span className="text-sm text-charcoal">{value}</span>
-                </li>
-              ))}
-            </ul>
+              <div className="mt-5 space-y-1.5 text-sm text-warm-gray md:text-base">
+                <p className="font-medium text-charcoal">
+                  {doctor.qualifications.join(" · ")}
+                </p>
+                <p>{doctor.fellowship}</p>
+              </div>
 
-            <Link
-              href="/about"
-              className="mt-8 inline-flex rounded-full border border-sage-dark px-6 py-2.5 text-sm font-medium text-sage-dark transition hover:bg-sage-dark hover:text-white"
-            >
-              Our Approach
-            </Link>
-          </motion.div>
-        </div>
+              <p className="mt-5 text-sm leading-relaxed text-warm-gray md:text-base">
+                {doctor.shortBio}
+              </p>
+
+              <Link
+                href="/about"
+                className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-sage-dark transition hover:text-sage md:text-base"
+              >
+                View full profile
+                <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

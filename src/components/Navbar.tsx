@@ -1,18 +1,26 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { navLinks } from "@/data/site";
+import { navLinks, siteConfig } from "@/data/site";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 bg-cream/70 backdrop-blur-md">
+    <header className="fixed top-0 right-0 left-0 z-50 border-b border-sage/10 bg-cream/85 backdrop-blur-md">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-display text-xl font-semibold text-charcoal">
-          Derma Glo
+        <Link href="/" className="flex items-center gap-2.5">
+          <Image
+            src={siteConfig.logo}
+            alt={siteConfig.name}
+            width={140}
+            height={40}
+            className="h-9 w-auto object-contain sm:h-10"
+            priority
+          />
         </Link>
 
         <ul className="hidden items-center gap-8 md:flex">

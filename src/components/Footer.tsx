@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, Mail, MapPin } from "lucide-react";
 import { siteConfig, navLinks } from "@/data/site";
 
@@ -30,8 +31,14 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <Link href="/" className="font-display text-2xl font-semibold">
-                {siteConfig.name}
+              <Link href="/" className="inline-block">
+                <Image
+                  src={siteConfig.logo}
+                  alt={siteConfig.name}
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 object-contain"
+                />
               </Link>
               <p className="mt-4 text-sm leading-relaxed text-white/60">
                 Professional dermatology care focused on results, safety, and

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { Check, Sparkles } from "lucide-react";
-import { clinicValues, stats } from "@/data/site";
+import { clinicValues, doctor, stats } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "About Us | Derma Glo",
   description:
-    "Learn about Dr. Lasya and our clinic's commitment to science-backed dermatology and personalized aesthetic care.",
+    "Learn about Dr. G. Lasya Priya and our clinic's commitment to science-backed dermatology and personalized aesthetic care.",
 };
 
 export default function AboutPage() {
@@ -25,36 +24,47 @@ export default function AboutPage() {
           with a detailed consultation, a long-term plan, and science-backed care.
         </p>
 
-        <div className="mt-16 grid items-center gap-12 lg:grid-cols-2">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
-            <Image
-              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80"
-              alt="Dr. Lasya"
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-            />
-          </div>
-          <div>
-            <h2 className="font-display text-3xl font-medium">Dr. Lasya</h2>
-            <p className="mt-2 text-sage">Dermatologist & Aesthetic Specialist</p>
-            <div className="mt-4 flex items-center gap-2 text-sm text-warm-gray">
-              <Sparkles className="h-4 w-4 text-gold" />
-              Excellence in skin care
+        <div className="mx-auto mt-14 max-w-5xl overflow-hidden rounded-2xl border border-cream-dark bg-surface shadow-sm">
+          <div className="flex flex-col md:flex-row">
+            <div className="relative mx-auto aspect-[3/4] w-full max-w-[260px] shrink-0 md:mx-0 md:max-w-none md:w-60 lg:w-64">
+              <Image
+                src={doctor.image}
+                alt={doctor.name}
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 260px, 256px"
+                priority
+              />
             </div>
-            <p className="mt-6 leading-relaxed text-warm-gray">
-              With over a decade of experience in medical dermatology and
-              aesthetic medicine, Dr. Lasya leads a team dedicated to delivering
-              safe, effective, and personalized treatments for every patient.
-            </p>
-            <ul className="mt-8 space-y-4">
-              {clinicValues.map((value) => (
-                <li key={value} className="flex items-start gap-3">
-                  <Check className="mt-0.5 h-5 w-5 shrink-0 text-sage" />
-                  <span className="text-sm">{value}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="flex flex-1 flex-col justify-center border-t border-cream-dark p-7 md:border-t-0 md:border-l md:p-9 lg:p-10">
+              <h2 className="font-display text-2xl font-medium text-charcoal md:text-3xl">
+                {doctor.name}
+              </h2>
+              <p className="mt-2 text-base text-sage">{doctor.title}</p>
+
+              <div className="mt-5 space-y-1.5 text-sm text-warm-gray md:text-base">
+                <p className="font-medium text-charcoal">
+                  {doctor.qualifications.join(" · ")}
+                </p>
+                <p>{doctor.fellowship}</p>
+              </div>
+
+              <p className="mt-5 text-sm leading-relaxed text-warm-gray md:text-base">
+                {doctor.bio}
+              </p>
+
+              <ul className="mt-7 space-y-3 border-t border-cream-dark pt-7">
+                {clinicValues.map((value) => (
+                  <li
+                    key={value}
+                    className="flex items-start gap-3 text-sm text-charcoal md:text-base"
+                  >
+                    <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-sage" />
+                    {value}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
