@@ -4,10 +4,22 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
-const galleryImages = [
-  "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80",
-  "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=400&q=80",
-  "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=400&q=80",
+const galleryMedia = [
+  {
+    type: "image" as const,
+    src: "/images/expert_care/expert_care_1.avif",
+    alt: "Expert dermatology care",
+  },
+  {
+    type: "video" as const,
+    src: "/images/expert_care/laser_treatment.mp4",
+    alt: "Laser treatment at Derma Glo",
+  },
+  {
+    type: "image" as const,
+    src: "/images/expert_care/exper_care_2.avif",
+    alt: "Skin rejuvenation treatment",
+  },
 ];
 
 export function ExpertCare() {
@@ -47,22 +59,34 @@ export function ExpertCare() {
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          {galleryImages.map((src, i) => (
+          {galleryMedia.map((item, i) => (
             <motion.div
-              key={src}
+              key={item.src}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className="relative aspect-[4/5] overflow-hidden rounded-2xl"
             >
-              <Image
-                src={src}
-                alt={`Gallery image ${i + 1}`}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 33vw"
-              />
+              {item.type === "video" ? (
+                <video
+                  src={item.src}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="h-full w-full object-cover"
+                  aria-label={item.alt}
+                />
+              ) : (
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                />
+              )}
             </motion.div>
           ))}
         </div>
