@@ -1,7 +1,10 @@
 "use client";
 
+import type { CSSProperties } from "react";
 import { Star } from "lucide-react";
 import type { GoogleReview } from "@/data/site";
+import { CardLoadGate } from "@/components/CardLoadGate";
+import { CompactReviewSkeleton } from "@/components/Skeleton";
 
 function CompactReviewCard({ review }: { review: GoogleReview }) {
   return (
@@ -40,14 +43,24 @@ export function GoogleReviewsScroller({ reviews }: { reviews: GoogleReview[] }) 
       className="relative overflow-hidden"
       style={{ height: "calc(128px * 2 + 12px)" }}
     >
-      <div
-        className="animate-marquee-vertical flex flex-col gap-3"
-        style={{ "--marquee-duration": `${duration}s` } as React.CSSProperties}
+      <CardLoadGate
+        delayMs={400}
+        skeleton={
+          <div className="flex flex-col gap-3">
+            <CompactReviewSkeleton />
+            <CompactReviewSkeleton />
+          </div>
+        }
       >
-        {[...reviews, ...reviews].map((review, i) => (
-          <CompactReviewCard key={`${review.id}-${i}`} review={review} />
-        ))}
-      </div>
+        <div
+          className="animate-marquee-vertical flex flex-col gap-3"
+          style={{ "--marquee-duration": `${duration}s` } as CSSProperties}
+        >
+          {[...reviews, ...reviews].map((review, i) => (
+            <CompactReviewCard key={`${review.id}-${i}`} review={review} />
+          ))}
+        </div>
+      </CardLoadGate>
     </div>
   );
 }

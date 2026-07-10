@@ -1,7 +1,10 @@
-import Image from "next/image";
+"use client";
+
 import Link from "next/link";
 import { Plus } from "lucide-react";
+import { motion } from "framer-motion";
 import type { Service } from "@/data/site";
+import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 
 type TreatmentCardProps = {
   service: Service;
@@ -10,7 +13,9 @@ type TreatmentCardProps = {
 
 export function TreatmentCard({ service, index }: TreatmentCardProps) {
   return (
-    <article
+    <motion.article
+      whileHover={{ x: 4 }}
+      transition={{ type: "spring", stiffness: 300, damping: 24 }}
       className={`group relative overflow-hidden rounded-2xl border border-cream-dark transition-colors duration-300 ${
         index === 1
           ? "bg-cream-dark/70"
@@ -27,13 +32,14 @@ export function TreatmentCard({ service, index }: TreatmentCardProps) {
 
       <div className="flex flex-col gap-8 p-6 md:flex-row md:items-center md:justify-between md:gap-12 md:p-8 lg:p-10">
         <div className="flex items-center gap-5 md:gap-8 md:pr-8">
-          <div className="relative h-12 w-12 shrink-0 md:h-14 md:w-14">
-            <Image
+          <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-full md:h-14 md:w-14">
+            <ImageWithSkeleton
               src={service.icon}
               alt=""
               fill
               className="object-contain"
               sizes="56px"
+              skeletonClassName="rounded-full"
             />
           </div>
           <h3 className="font-display max-w-[14rem] text-2xl leading-tight font-medium text-charcoal capitalize md:max-w-none md:text-3xl lg:text-4xl">
@@ -53,7 +59,7 @@ export function TreatmentCard({ service, index }: TreatmentCardProps) {
           </Link>
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 }
 

@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
-import Image from "next/image";
 import { Calendar, ChevronLeft, ChevronRight, Sparkles } from "lucide-react";
+import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 
 type BeforeAfterSliderProps = {
   beforeSrc: string;
@@ -57,7 +57,7 @@ export function BeforeAfterSlider({
       onPointerCancel={onPointerUp}
     >
       {/* After — full image */}
-      <Image
+      <ImageWithSkeleton
         src={afterSrc}
         alt={afterAlt}
         fill
@@ -71,7 +71,7 @@ export function BeforeAfterSlider({
         className="absolute inset-0 overflow-hidden"
         style={{ clipPath: `inset(0 ${100 - position}% 0 0)` }}
       >
-        <Image
+        <ImageWithSkeleton
           src={beforeSrc}
           alt={beforeAlt}
           fill

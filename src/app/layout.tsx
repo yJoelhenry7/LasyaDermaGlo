@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { PageLoader } from "@/components/PageLoader";
 import { createMetadata } from "@/lib/seo";
 import "./globals.css";
 
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className={`${inter.className} antialiased`}>
+        <PageLoader />
         <Navbar />
         <main>{children}</main>
         <Footer />

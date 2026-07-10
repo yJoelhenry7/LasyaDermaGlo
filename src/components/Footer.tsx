@@ -5,15 +5,28 @@ import { siteConfig, navLinks } from "@/data/site";
 
 export function Footer() {
   return (
-    <footer className="bg-sage-dark text-white">
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-sage-dark/30 to-transparent" />
-        <div className="relative mx-auto max-w-7xl px-6 py-20">
+    <footer className="relative overflow-hidden text-white">
+      {/* Skincare background across the full footer */}
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.unsplash.com/photo-1573461160327-b450ce3d8e7f?w=1800&q=80"
+          alt=""
+          fill
+          className="object-cover object-center"
+          sizes="100vw"
+          priority={false}
+        />
+        <div className="absolute inset-0 bg-sage-dark/88" />
+        <div className="absolute inset-0 bg-gradient-to-b from-sage-dark/40 via-transparent to-sage-dark/70" />
+      </div>
+
+      <div className="relative">
+        <div className="mx-auto max-w-7xl px-6 py-20">
           <div className="text-center">
             <h2 className="font-display text-3xl font-medium md:text-4xl lg:text-5xl">
               Transform your skin with us
             </h2>
-            <p className="mx-auto mt-4 max-w-xl text-white/70">
+            <p className="mx-auto mt-4 max-w-xl text-white/75">
               Book a consultation with our dermatology specialists and take the
               first step toward lasting results.
             </p>
@@ -27,7 +40,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
+      <div className="relative border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-16">
           <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
             <div>
@@ -40,7 +53,7 @@ export function Footer() {
                   className="h-12 w-12 object-contain"
                 />
               </Link>
-              <p className="mt-4 text-sm leading-relaxed text-white/60">
+              <p className="mt-4 text-sm leading-relaxed text-white/65">
                 Professional dermatology care focused on results, safety, and
                 personalized treatment solutions.
               </p>

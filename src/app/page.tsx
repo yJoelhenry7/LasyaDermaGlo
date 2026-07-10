@@ -5,7 +5,6 @@ import { AboutDoctor } from "@/components/sections/AboutDoctor";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { MedicalDermatology } from "@/components/sections/MedicalDermatology";
 import { Testimonials } from "@/components/sections/Testimonials";
-import { BlogPreview } from "@/components/sections/BlogPreview";
 import { AppointmentForm } from "@/components/sections/AppointmentForm";
 import { FAQ } from "@/components/sections/FAQ";
 
@@ -19,7 +18,6 @@ export default function HomePage() {
       <WhyChooseUs />
       <MedicalDermatology />
       <Testimonials />
-      <BlogPreview />
       <AppointmentForm />
       <FAQ />
     </>

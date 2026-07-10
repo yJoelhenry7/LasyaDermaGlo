@@ -18,6 +18,9 @@ export const siteConfig = {
   email: "formoredermaglo@gmail.com",
   address:
     "1st Floor, Opp. Fasttracks, DDC Road, Danivelpeta, Rajahmundry – 533 108",
+  mapsUrl: "https://share.google/VpOcUAiWTsmwxNl2p",
+  mapsEmbedUrl:
+    "https://maps.google.com/maps?q=Derma%20Glo%2C%201st%20Floor%2C%20Opp.%20Fasttracks%2C%20DDC%20Road%2C%20Danivelpeta%2C%20Rajahmundry%20%E2%80%93%20533%20108&z=16&output=embed",
 };
 
 export const seoKeywords = [
@@ -88,62 +91,62 @@ export const heroTreatments = [
   {
     label: "Pigmentation Care",
     image:
-      "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=120&q=80",
+      "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=200&q=80",
   },
   {
     label: "Aging Solutions",
     image:
-      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=120&q=80",
+      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=200&q=80",
   },
   {
     label: "Skin Rejuvenation",
     image:
-      "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=120&q=80",
+      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=200&q=80",
   },
   {
     label: "Botox & Fillers",
     image:
-      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=120&q=80",
+      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=200&q=80",
   },
   {
     label: "Laser Treatments",
     image:
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=120&q=80",
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=200&q=80",
   },
   {
     label: "Chemical Peels",
     image:
-      "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=120&q=80",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=200&q=80",
   },
   {
     label: "Acne & Skin Health",
     image:
-      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=120&q=80",
+      "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=200&q=80",
   },
   {
     label: "Scar Reduction",
     image:
-      "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=120&q=80",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=200&q=80",
   },
   {
     label: "Hydrafacial",
     image:
-      "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=120&q=80",
+      "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=200&q=80",
   },
   {
     label: "Microneedling",
     image:
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=120&q=80",
+      "https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=200&q=80",
   },
   {
     label: "PRP Therapy",
     image:
-      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=120&q=80",
+      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=200&q=80",
   },
   {
     label: "Melasma Treatment",
     image:
-      "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=120&q=80",
+      "https://images.unsplash.com/photo-1556228852-6bf19d1b1fc5?w=200&q=80",
   },
 ];
 
@@ -373,7 +376,7 @@ export const blogPosts = [
     category: "Skin Health",
     date: "Mar 4, 2026",
     image:
-      "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=600&q=80",
+      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80",
   },
   {
     slug: "stress-and-skin",
@@ -389,7 +392,7 @@ export const blogPosts = [
     category: "Acne Care",
     date: "Feb 27, 2026",
     image:
-      "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=600&q=80",
+      "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&q=80",
   },
 ];
 
