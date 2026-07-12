@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram } from "lucide-react";
 import { siteConfig, navLinks } from "@/data/site";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function Footer() {
   return (
@@ -64,6 +65,26 @@ export function Footer() {
                 <span className="rounded-full border border-white/20 px-3 py-1 text-xs text-white/80">
                   Board Certified
                 </span>
+              </div>
+              <div className="mt-6 flex items-center gap-3">
+                <a
+                  href={siteConfig.socials.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Follow Derma Glo on Instagram"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-white/40 hover:bg-white/10 hover:text-white"
+                >
+                  <Instagram className="h-4 w-4" />
+                </a>
+                <a
+                  href={siteConfig.socials.whatsapp}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Message Derma Glo on WhatsApp"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 text-white/80 transition hover:border-white/40 hover:bg-white/10 hover:text-white"
+                >
+                  <WhatsAppIcon className="h-4 w-4" />
+                </a>
               </div>
             </div>
 

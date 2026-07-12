@@ -21,6 +21,11 @@ export const siteConfig = {
   mapsUrl: "https://share.google/VpOcUAiWTsmwxNl2p",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Derma%20Glo%2C%201st%20Floor%2C%20Opp.%20Fasttracks%2C%20DDC%20Road%2C%20Danivelpeta%2C%20Rajahmundry%20%E2%80%93%20533%20108&z=16&output=embed",
+  socials: {
+    instagram:
+      "https://www.instagram.com/dermaglo.clinic_rjy",
+    whatsapp: "https://wa.me/message/YOZN74TI4NQRO1",
+  },
 };
 
 export const seoKeywords = [

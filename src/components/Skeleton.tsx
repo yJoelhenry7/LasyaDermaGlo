@@ -91,13 +91,14 @@ export function ReviewCardSkeleton({ className = "" }: { className?: string }) {
 /** Compact review row (bento scroller) */
 export function CompactReviewSkeleton() {
   return (
-    <div className="h-[128px] shrink-0 rounded-xl border border-cream-dark bg-surface p-4">
+    <div className="flex h-[168px] shrink-0 flex-col overflow-hidden rounded-xl border border-cream-dark bg-surface p-4">
       <Skeleton className="h-3 w-20" />
-      <div className="mt-2 space-y-2">
+      <div className="mt-2 flex-1 space-y-2">
         <Skeleton className="h-3 w-full" />
         <Skeleton className="h-3 w-[85%]" />
+        <Skeleton className="h-3 w-[70%]" />
       </div>
-      <div className="mt-3 flex items-center gap-2.5">
+      <div className="mt-2 flex items-center gap-2.5">
         <Skeleton className="h-8 w-8 rounded-full" />
         <div className="space-y-1.5">
           <Skeleton className="h-3 w-20" />

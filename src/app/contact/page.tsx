@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
 import { siteConfig } from "@/data/site";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export const metadata: Metadata = {
   title: "Contact | Derma Glo",
@@ -48,6 +49,30 @@ export default function ContactPage() {
               className="mt-2 block text-sm text-warm-gray hover:text-sage"
             >
               {siteConfig.email}
+            </a>
+          </div>
+          <div className="rounded-2xl bg-surface p-8">
+            <Instagram className="h-6 w-6 text-sage" />
+            <h2 className="mt-4 font-medium">Instagram</h2>
+            <a
+              href={siteConfig.socials.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 block text-sm text-warm-gray hover:text-sage"
+            >
+              @dermaglo.clinic_rjy
+            </a>
+          </div>
+          <div className="rounded-2xl bg-surface p-8">
+            <WhatsAppIcon className="h-6 w-6 text-sage" />
+            <h2 className="mt-4 font-medium">WhatsApp</h2>
+            <a
+              href={siteConfig.socials.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 block text-sm text-warm-gray hover:text-sage"
+            >
+              Message us on WhatsApp
             </a>
           </div>
         </div>
