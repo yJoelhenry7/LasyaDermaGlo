@@ -56,15 +56,30 @@ export const seoKeywords = [
 
 export const doctor = {
   name: "Dr. G. Lasya Priya",
-  shortName: "Dr. G. Lasya Priya",
-  title: "Dermatologist & Aesthetic Specialist",
+  shortName: "Dr. Lasya Priya",
+  title: "Dermatologist & Cosmetologist",
   image: "/images/doctor.jpeg",
-  qualifications: ["MD", "DVL"],
+  qualifications: ["MBBS", "MD DVL"],
   fellowship:
     "Fellowship in cosmetic dermatology, lasers & anti-aging",
-  bio: "With expertise in medical dermatology and advanced aesthetic treatments, Dr. G. Lasya Priya provides safe, effective, and personalized care for every patient.",
+  experienceYears: 7,
+  languages: ["Telugu", "English", "Hindi", "Tamil"],
+  specialties: [
+    "Paediatric dermatology",
+    "Skin concerns",
+    "Hair fall",
+    "Nail disorders",
+    "Botox",
+    "Fillers",
+    "Threads",
+  ],
   shortBio:
-    "Board-certified dermatologist specializing in medical and cosmetic skin care, with advanced training in lasers and anti-aging treatments.",
+    "Dermatologist and cosmetologist in Rajahmundry offering comprehensive skin, hair, and nail care with advanced aesthetic expertise.",
+  bio: [
+    "Dr. Lasya Priya is a skilled dermatologist and cosmetologist based in Rajahmundry, dedicated to providing comprehensive skin, hair, and nail care. She has done her senior residency and paediatric dermatology observership at reputed Christian Medical College (CMC, Vellore). She completed her MBBS from Rajiv Gandhi University of Health Sciences and obtained her MD in Dermatology from Dr. NTR University of Health Sciences. She further enhanced her expertise through a Fellowship in Cosmetology.",
+    "With a keen interest in aesthetic and cosmetic dermatology, Dr. Lasya Priya specializes in advanced laser treatments, dermatosurgery, acne and scar management, pigmentation disorders, anti-aging procedures, hair restoration, fillers, mesotherapy, and other cosmetic treatments. She remains committed to staying at the forefront of dermatological advancements through continuous training and professional development.",
+    "Known for her compassionate approach and attention to detail, she strives to provide personalized, evidence-based treatments that help patients achieve healthy skin, beautiful hair, and enhanced confidence.",
+  ],
 };
 
 export const navLinks = [
@@ -243,10 +258,10 @@ export const clinicValues = [
 ];
 
 export const stats = [
-  { value: "10+", label: "Years of medical excellence" },
+  { value: "7+", label: "Years of experience" },
   { value: "2,000+", label: "Procedures" },
   { value: "50+", label: "Treatments" },
-  { value: "Since 2016", label: "Trusted care" },
+  { value: "4", label: "Languages spoken" },
 ];
 
 export const conditions = [

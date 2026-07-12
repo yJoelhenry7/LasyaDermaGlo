@@ -212,11 +212,11 @@ export function WhyChooseUs() {
             <div className="grid grid-rows-[1fr_2fr] gap-4 lg:min-h-[640px]">
               <BentoCard className="relative flex flex-col justify-between p-5" delay={0.18}>
                 <p className="font-display pointer-events-none absolute top-3 right-3 text-4xl font-medium text-cream-dark/80 select-none md:text-5xl">
-                  Since 2016
+                  Experience
                 </p>
                 <div className="relative">
                   <p className="font-display text-4xl font-medium text-charcoal md:text-5xl">
-                    <Counter from={0} to={10} suffix="+" />
+                    <Counter from={0} to={7} suffix="+" />
                   </p>
                   <p className="mt-1 max-w-[10rem] text-sm text-warm-gray">
                     Years of medical excellence

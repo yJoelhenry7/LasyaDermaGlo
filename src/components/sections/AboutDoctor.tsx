@@ -44,11 +44,26 @@ export function AboutDoctor() {
                       {doctor.qualifications.join(" · ")}
                     </p>
                     <p>{doctor.fellowship}</p>
+                    <p>
+                      {doctor.experienceYears}+ years ·{" "}
+                      {doctor.languages.join(", ")}
+                    </p>
                   </div>
 
                   <p className="mt-6 max-w-xl text-base leading-relaxed text-warm-gray md:text-lg">
                     {doctor.shortBio}
                   </p>
+
+                  <div className="mt-6 flex max-w-xl flex-wrap gap-2">
+                    {doctor.specialties.slice(0, 5).map((specialty) => (
+                      <span
+                        key={specialty}
+                        className="rounded-full border border-cream-dark bg-cream px-3 py-1 text-xs font-medium text-charcoal"
+                      >
+                        {specialty}
+                      </span>
+                    ))}
+                  </div>
 
                   <Link
                     href="/about"
