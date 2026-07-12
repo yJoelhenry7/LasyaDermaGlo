@@ -24,12 +24,12 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/15 to-transparent" />
 
         {/* Hero text — compact, positioned at top */}
-        <div className="relative z-10 flex flex-col items-center px-4 pt-6 text-center sm:px-8 sm:pt-8 md:pt-10">
+        <div className="relative z-10 flex flex-col items-center px-4 pt-7 text-center sm:px-8 sm:pt-9 md:pt-10">
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="font-display max-w-2xl text-xl leading-tight font-medium text-white drop-shadow-lg sm:text-2xl md:text-3xl lg:text-4xl"
+            className="font-display whitespace-nowrap text-[clamp(1.15rem,4.2vw,2.75rem)] leading-tight font-medium text-white drop-shadow-lg"
           >
             {siteConfig.tagline}
           </motion.h1>
@@ -38,7 +38,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="mt-2 max-w-md text-xs leading-snug text-white/90 drop-shadow sm:mt-3 sm:text-sm"
+            className="mt-3 max-w-lg text-sm leading-relaxed text-white/90 drop-shadow sm:mt-4 sm:text-base"
           >
             Advanced dermatology and modern aesthetic treatments designed to improve
           </motion.p>
