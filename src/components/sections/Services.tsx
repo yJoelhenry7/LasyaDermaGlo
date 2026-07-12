@@ -30,7 +30,7 @@ export function Services() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
               >
-                <TreatmentCard service={service} index={i} />
+                <TreatmentCard service={service} />
               </motion.div>
             ))}
           </CardLoadGate>

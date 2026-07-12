@@ -3,6 +3,8 @@ import { Inter, Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageLoader } from "@/components/PageLoader";
+import { ScrollToTop } from "@/components/ScrollToTop";
+import { CursorFollower } from "@/components/CursorFollower";
 import { createMetadata } from "@/lib/seo";
 import "./globals.css";
 
@@ -30,6 +32,8 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ScrollToTop />
+        <CursorFollower />
       </body>
     </html>
   );

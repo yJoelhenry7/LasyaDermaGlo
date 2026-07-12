@@ -43,7 +43,7 @@ export function Footer() {
 
       <div className="relative border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-16">
-          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
             <div>
               <Link href="/" className="inline-block">
                 <Image
@@ -109,38 +109,6 @@ export function Footer() {
                     className="text-sm text-white/70 transition hover:text-white"
                   >
                     Blog
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-white/50">
-                Patients
-              </h3>
-              <ul className="mt-4 space-y-3">
-                <li>
-                  <Link
-                    href="/contact"
-                    className="text-sm text-white/70 transition hover:text-white"
-                  >
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/appointment"
-                    className="text-sm text-white/70 transition hover:text-white"
-                  >
-                    Appointment
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/privacy"
-                    className="text-sm text-white/70 transition hover:text-white"
-                  >
-                    Privacy Policy
                   </Link>
                 </li>
               </ul>

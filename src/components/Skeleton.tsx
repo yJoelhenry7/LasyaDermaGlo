@@ -113,20 +113,20 @@ export function CompactReviewSkeleton() {
 export function ProfileCardSkeleton() {
   return (
     <div className="overflow-hidden rounded-2xl border border-cream-dark bg-surface shadow-sm">
-      <div className="flex flex-col sm:flex-row">
-        <Skeleton className="aspect-[3/4] w-full max-w-[240px] rounded-none sm:w-52 md:w-60" />
-        <div className="flex flex-1 flex-col justify-center p-7 sm:p-8 md:p-10">
-          <Skeleton className="h-8 w-56" />
-          <Skeleton className="mt-3 h-4 w-40" />
-          <Skeleton className="mt-5 h-4 w-64" />
-          <Skeleton className="mt-2 h-4 w-48" />
-          <div className="mt-5 space-y-2">
-            <Skeleton className="h-3.5 w-full" />
-            <Skeleton className="h-3.5 w-[90%]" />
-            <Skeleton className="h-3.5 w-[75%]" />
+      <div className="flex flex-col-reverse md:flex-row">
+        <div className="flex flex-1 flex-col justify-center p-8 md:p-10 lg:p-14">
+          <Skeleton className="h-10 w-64 md:h-12 md:w-80" />
+          <Skeleton className="mt-3 h-4 w-48" />
+          <Skeleton className="mt-6 h-4 w-56" />
+          <Skeleton className="mt-2 h-4 w-72" />
+          <div className="mt-6 space-y-2">
+            <Skeleton className="h-4 w-full max-w-xl" />
+            <Skeleton className="h-4 w-[90%] max-w-lg" />
+            <Skeleton className="h-4 w-[75%] max-w-md" />
           </div>
-          <Skeleton className="mt-6 h-4 w-32" />
+          <Skeleton className="mt-8 h-4 w-36" />
         </div>
+        <Skeleton className="aspect-[3/4] w-full max-w-[320px] rounded-none md:max-w-none md:w-72 lg:w-96" />
       </div>
     </div>
   );

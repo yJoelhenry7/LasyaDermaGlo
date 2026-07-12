@@ -10,8 +10,8 @@ import { ProfileCardSkeleton } from "@/components/Skeleton";
 
 export function AboutDoctor() {
   return (
-    <section className="py-16 md:py-24">
-      <div className="mx-auto max-w-5xl px-6">
+    <section className="py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-6">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ export function AboutDoctor() {
           Lead Dermatologist
         </motion.p>
 
-        <div className="mt-8">
+        <div className="mt-10">
           <CardLoadGate skeleton={<ProfileCardSkeleton />}>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -32,37 +32,27 @@ export function AboutDoctor() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="overflow-hidden rounded-2xl border border-cream-dark bg-surface shadow-sm"
             >
-              <div className="flex flex-col sm:flex-row">
-                <div className="relative mx-auto aspect-[3/4] w-full max-w-[240px] shrink-0 overflow-hidden sm:mx-0 sm:max-w-none sm:w-52 md:w-60">
-                  <ImageWithSkeleton
-                    src={doctor.image}
-                    alt={doctor.name}
-                    fill
-                    className="object-cover object-top transition-transform duration-500 hover:scale-105"
-                    sizes="(max-width: 640px) 240px, 240px"
-                  />
-                </div>
-
-                <div className="flex flex-1 flex-col justify-center border-t border-cream-dark p-7 sm:border-t-0 sm:border-l sm:p-8 md:p-10">
-                  <h2 className="font-display text-2xl font-medium text-charcoal md:text-3xl">
+              <div className="flex flex-col-reverse md:flex-row">
+                <div className="flex flex-1 flex-col justify-center border-t border-cream-dark p-8 md:border-t-0 md:border-r md:p-10 lg:p-14">
+                  <h2 className="font-display text-3xl font-medium text-charcoal md:text-4xl lg:text-5xl">
                     {doctor.name}
                   </h2>
-                  <p className="mt-2 text-base text-sage">{doctor.title}</p>
+                  <p className="mt-3 text-base text-sage md:text-lg">{doctor.title}</p>
 
-                  <div className="mt-5 space-y-1.5 text-sm text-warm-gray md:text-base">
+                  <div className="mt-6 space-y-1.5 text-sm text-warm-gray md:text-base">
                     <p className="font-medium text-charcoal">
                       {doctor.qualifications.join(" · ")}
                     </p>
                     <p>{doctor.fellowship}</p>
                   </div>
 
-                  <p className="mt-5 text-sm leading-relaxed text-warm-gray md:text-base">
+                  <p className="mt-6 max-w-xl text-base leading-relaxed text-warm-gray md:text-lg">
                     {doctor.shortBio}
                   </p>
 
                   <Link
                     href="/about"
-                    className="group mt-6 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-sage-dark transition hover:text-sage md:text-base"
+                    className="group mt-8 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-sage-dark transition hover:text-sage md:text-base"
                   >
                     <span className="relative after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-sage after:transition-all after:duration-300 group-hover:after:w-full">
                       View full profile
@@ -76,6 +66,16 @@ export function AboutDoctor() {
                       <ArrowUpRight className="h-4 w-4" />
                     </motion.span>
                   </Link>
+                </div>
+
+                <div className="relative mx-auto aspect-[3/4] w-full max-w-[320px] shrink-0 overflow-hidden md:mx-0 md:max-w-none md:w-72 lg:w-96">
+                  <ImageWithSkeleton
+                    src={doctor.image}
+                    alt={doctor.name}
+                    fill
+                    className="object-cover object-top transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 320px, (max-width: 1024px) 288px, 384px"
+                  />
                 </div>
               </div>
             </motion.div>

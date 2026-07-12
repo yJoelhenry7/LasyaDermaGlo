@@ -8,19 +8,14 @@ import { ImageWithSkeleton } from "@/components/ImageWithSkeleton";
 
 type TreatmentCardProps = {
   service: Service;
-  index: number;
 };
 
-export function TreatmentCard({ service, index }: TreatmentCardProps) {
+export function TreatmentCard({ service }: TreatmentCardProps) {
   return (
     <motion.article
       whileHover={{ x: 4 }}
       transition={{ type: "spring", stiffness: 300, damping: 24 }}
-      className={`group relative overflow-hidden rounded-2xl border border-cream-dark transition-colors duration-300 ${
-        index === 1
-          ? "bg-cream-dark/70"
-          : "bg-surface hover:bg-cream-dark/60"
-      }`}
+      className="group relative overflow-hidden rounded-2xl border border-cream-dark bg-surface transition-colors duration-300 hover:bg-cream-dark/60"
     >
       <Link
         href={`/services/${service.slug}`}

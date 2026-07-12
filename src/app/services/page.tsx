@@ -24,8 +24,8 @@ export default function ServicesPage() {
         </p>
 
         <div className="mt-14 space-y-4 md:space-y-5">
-          {services.map((service, i) => (
-            <TreatmentCard key={service.id} service={service} index={i} />
+          {services.map((service) => (
+            <TreatmentCard key={service.id} service={service} />
           ))}
         </div>
 

@@ -131,3 +131,48 @@ body {
     animation: none;
   }
 }
+
+/* Custom cursor follower (desktop / fine pointer only) */
+@media (pointer: fine) {
+  html.has-cursor-follower,
+  html.has-cursor-follower * {
+    cursor: none !important;
+  }
+
+  html.has-cursor-follower input,
+  html.has-cursor-follower textarea,
+  html.has-cursor-follower select,
+  html.has-cursor-follower [contenteditable="true"] {
+    cursor: text !important;
+  }
+
+  html.has-cursor-follower a,
+  html.has-cursor-follower button,
+  html.has-cursor-follower [role="button"],
+  html.has-cursor-follower summary,
+  html.has-cursor-follower [data-cursor="hover"] {
+    transition:
+      transform 0.28s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.28s ease,
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      opacity 0.2s ease;
+  }
+
+  html.has-cursor-follower a:hover,
+  html.has-cursor-follower button:hover,
+  html.has-cursor-follower [role="button"]:hover,
+  html.has-cursor-follower summary:hover,
+  html.has-cursor-follower [data-cursor="hover"]:hover {
+    transform: scale(1.035);
+  }
+
+  html.has-cursor-follower a:active,
+  html.has-cursor-follower button:active,
+  html.has-cursor-follower [role="button"]:active,
+  html.has-cursor-follower summary:active,
+  html.has-cursor-follower [data-cursor="hover"]:active {
+    transform: scale(0.97);
+  }
+}
