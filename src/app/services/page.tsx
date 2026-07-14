@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
 
 export default function ServicesPage() {
   return (
-    <div className="bg-cream pt-28 pb-20">
+    <div className="bg-cream pt-36 pb-20">
       <div className="mx-auto max-w-5xl px-6">
         <TreatmentsHeader
           label="Services"

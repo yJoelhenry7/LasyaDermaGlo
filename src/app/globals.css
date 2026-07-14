@@ -10,7 +10,7 @@
   --color-warm-gray: #4a6b6c;
   --color-gold: #5ec4c7;
   --color-surface: #ffffff;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji";
   --font-display: var(--font-playfair), Georgia, serif;
 }
 
@@ -132,20 +132,8 @@ body {
   }
 }
 
-/* Custom cursor follower (desktop / fine pointer only) */
+/* Cursor follower interactions (desktop / fine pointer only) — native cursor stays visible */
 @media (pointer: fine) {
-  html.has-cursor-follower,
-  html.has-cursor-follower * {
-    cursor: none !important;
-  }
-
-  html.has-cursor-follower input,
-  html.has-cursor-follower textarea,
-  html.has-cursor-follower select,
-  html.has-cursor-follower [contenteditable="true"] {
-    cursor: text !important;
-  }
-
   html.has-cursor-follower a,
   html.has-cursor-follower button,
   html.has-cursor-follower [role="button"],

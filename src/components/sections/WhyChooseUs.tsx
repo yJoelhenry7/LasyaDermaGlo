@@ -123,6 +123,7 @@ export function WhyChooseUs() {
                 <BeforeAfterSlider
                   beforeSrc="/images/before_treatment.avif"
                   afterSrc="/images/after_treatment.avif"
+                  treatment="Acne treatment"
                 />
               </BentoCard>
 

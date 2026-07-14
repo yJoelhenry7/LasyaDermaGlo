@@ -176,17 +176,17 @@ export const services = [
     slug: "acne-skin-health",
     title: "Acne & skin health",
     description:
-      "Personalized dermatology care for acne, pigmentation, and long-term skin maintenance.",
+      "Acne and acne scar treatment with peels, microneedling, laser, and personalized dermatology care.",
     longDescription:
-      "Our acne and skin health program combines medical-grade diagnostics with customized treatment plans for active breakouts, post-acne marks, and ongoing skin maintenance. We focus on long-term results through evidence-based protocols tailored to your skin type and lifestyle.",
+      "Acne Scar Treatment to discover clearer skin. Derma Glo treats active acne, blemishes, and lasting scars with dermatologist-led peels, microneedling, laser, and scar procedures.",
     benefits: [
-      "Comprehensive skin assessment and diagnosis",
-      "Customized medical and aesthetic treatment plans",
-      "Pigmentation and acne scar management",
-      "Long-term maintenance and skincare guidance",
+      "Active acne and breakout control",
+      "Acne scar reduction (icepick, boxcar, rolling)",
+      "Peels, microneedling, laser & subcision options",
+      "Personalized long-term skin maintenance",
     ],
     image:
-      "https://images.unsplash.com/photo-1570554886111-e80fcca6a029?w=1200&q=80",
+      "https://images.unsplash.com/photo-1713085085470-fba013d67e65?w=1200&q=80",
     icon: "/images/icons/acne_skin_icon.svg",
   },
   {
@@ -212,17 +212,17 @@ export const services = [
     slug: "laser-treatments",
     title: "Laser treatments",
     description:
-      "Advanced laser solutions for hair removal, pigmentation, texture, and scars.",
+      "Laser hair removal and reduction for face and body with Nd-YAG and Diode technology.",
     longDescription:
-      "State-of-the-art laser technology addresses a wide range of skin concerns with precision and safety. Whether targeting unwanted hair, uneven tone, or textural irregularities, treatments are customized to your skin's unique needs.",
+      "Laser hair removal treatment for smooth, long-lasting hair reduction on face, underarms, arms, legs, chest, back, abdomen, and bikini line — personalized for Indian skin types.",
     benefits: [
-      "Laser hair reduction",
-      "Pigmentation and sun damage correction",
-      "Scar and texture improvement",
-      "Safe protocols for diverse skin types",
+      "Laser hair reduction for face and body",
+      "US FDA–approved Nd-YAG and Diode technology",
+      "Personalized settings for Indian skin types",
+      "Reduced ingrown hairs and long-lasting smoothness",
     ],
     image:
-      "https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1200&q=80",
+      "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=1200&q=80",
     icon: "/images/icons/laser_treatment_icon.svg",
   },
   {
@@ -230,14 +230,16 @@ export const services = [
     slug: "anti-aging-solutions",
     title: "Anti-aging solutions",
     description:
-      "Target lines, volume loss, dullness, and tired skin with safe, proven treatments.",
+      "Advanced anti-aging treatments for fine lines, wrinkles, sagging, and sun damage with peels, lasers, and personalized care.",
     longDescription:
-      "Restore radiance and youthful vitality with a holistic anti-aging approach. We combine in-clinic treatments with personalized skincare plans to address fine lines, loss of firmness, and dullness for visibly healthier skin.",
+      "At Derma Glo, we understand the significance of youthful, radiant skin and the confidence it can bring. Our advanced anti-aging treatments are designed to combat fine lines, wrinkles, and loss of elasticity effectively.",
     benefits: [
       "Fine line and wrinkle reduction",
       "Skin tightening and firmness",
       "Improved tone, texture, and glow",
       "Preventive and restorative care plans",
+      "Chemical peels and laser rejuvenation",
+      "Personalized dermatology-led plans",
     ],
     image:
       "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=1200&q=80",

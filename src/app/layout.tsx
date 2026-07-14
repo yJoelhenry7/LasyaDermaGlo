@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { PageLoader } from "@/components/PageLoader";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { CursorFollower } from "@/components/CursorFollower";
 import { createMetadata } from "@/lib/seo";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -26,12 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className={`${inter.className} antialiased`}>
+    <html lang="en" className={playfair.variable}>
+      <body className="font-sans antialiased">
         <PageLoader />
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppFloat />
         <ScrollToTop />
         <CursorFollower />
       </body>
