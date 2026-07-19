@@ -214,50 +214,6 @@ export const laserHairRemovalPage = {
       ],
     },
   ],
-  pricing: {
-    title: "Laser Hair Removal Price Range Per Session",
-    disclaimer:
-      "Prices are indicative per session. Final pricing can vary based on area, hair growth, skin assessment, and clinic recommendation. Please consult our experts for the final treatment plan and applicable offers.",
-    rows: [
-      { area: "Full Leg", price: "₹6,440 – 9,200" },
-      { area: "Upper Leg", price: "₹5,600 – 8,000" },
-      { area: "Lower Leg", price: "₹5,600 – 8,000" },
-      { area: "Chin", price: "₹2,380 – 3,400" },
-      { area: "Full Back", price: "₹6,440 – 9,200" },
-      { area: "Upper Back", price: "₹5,600 – 8,000" },
-      { area: "Lower Back", price: "₹5,600 – 8,000" },
-      { area: "Full Arm", price: "₹6,440 – 9,200" },
-      { area: "Underarm", price: "₹2,380 – 3,400" },
-      { area: "Forearm", price: "₹5,600 – 8,000" },
-      { area: "Neck", price: "₹3,780 – 5,400" },
-      { area: "Upper Neck", price: "₹2,800 – 4,000" },
-      { area: "Forehead", price: "₹3,780 – 5,400" },
-      { area: "Full Bikini", price: "₹5,600 – 8,000" },
-      { area: "Bikini Line", price: "₹3,780 – 5,400" },
-      { area: "Sidelocks", price: "₹2,800 – 4,000" },
-      { area: "Midrib", price: "₹2,800 – 4,000" },
-      { area: "Hands", price: "₹2,800 – 4,000" },
-      { area: "Hairline", price: "₹2,800 – 4,000" },
-      { area: "Feet", price: "₹2,800 – 4,000" },
-      { area: "Eyebrow", price: "₹2,800 – 4,000" },
-      { area: "Cheeks", price: "₹2,800 – 4,000" },
-      { area: "Areola", price: "₹2,800 – 4,000" },
-      { area: "Abdomen", price: "₹6,440 – 9,200" },
-      { area: "Abdomen Line", price: "₹2,800 – 4,000" },
-      { area: "Upper Lip", price: "₹2,380 – 3,400" },
-      { area: "Lower Lip", price: "₹2,380 – 3,400" },
-      { area: "Throat", price: "₹2,380 – 3,400" },
-      { area: "Nose", price: "₹2,380 – 3,400" },
-      { area: "Navel", price: "₹2,380 – 3,400" },
-      { area: "Midbrow", price: "₹2,380 – 3,400" },
-      { area: "Earlobe", price: "₹2,380 – 3,400" },
-      { area: "Beard Shape", price: "₹2,380 – 3,400" },
-      { area: "Shoulders", price: "₹5,600 – 8,000" },
-      { area: "Full Face", price: "₹6,440 – 9,200" },
-      { area: "Lower Face", price: "₹5,600 – 8,000" },
-      { area: "Full Beard", price: "₹7,420 – 10,600" },
-    ],
-  },
   journey: [
     {
       title: "Consultation",
@@ -286,11 +242,6 @@ export const laserHairRemovalPage = {
       question: "How many sessions are required for laser hair reduction?",
       answer:
         "Experts commonly recommend 4–6 sessions. The exact number can vary depending on hair thickness, hair growth cycle, skin type, treatment area, and individual response.",
-    },
-    {
-      question: "What is the laser hair removal price?",
-      answer:
-        "Indicative prices start from ₹2,380–3,400 for smaller areas such as chin, upper lip, throat, and underarms. Larger areas such as full legs, full arms, full face, full back, and abdomen range from ₹6,440–9,200, while full beard hair removal ranges from ₹7,420–10,600. Final cost is confirmed after consultation.",
     },
     {
       question:

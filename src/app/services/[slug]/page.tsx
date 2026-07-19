@@ -47,7 +47,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return createMetadata({
       title: "Laser Hair Removal Treatment",
       description:
-        "Laser hair removal and reduction at Derma Glo with Nd-YAG and Diode lasers for face and body — sessions, pricing, benefits, and aftercare.",
+        "Laser hair removal and reduction at Derma Glo with Nd-YAG and Diode lasers for face and body — sessions, benefits, and aftercare.",
       path: `/services/${service.slug}`,
     });
   }

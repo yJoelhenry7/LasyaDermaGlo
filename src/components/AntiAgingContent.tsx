@@ -66,42 +66,6 @@ export function AntiAgingContent() {
 
       <section className="border-t border-cream-dark pt-10">
         <h2 className="font-display text-2xl font-medium text-charcoal md:text-3xl">
-          {page.pricing.title}
-        </h2>
-        <p className="mt-4 text-sm leading-relaxed text-warm-gray md:text-base">
-          {page.pricing.disclaimer}
-        </p>
-        <div className="mt-6 overflow-x-auto rounded-2xl border border-cream-dark">
-          <table className="min-w-full text-left text-sm">
-            <thead className="bg-cream-dark/60 text-charcoal">
-              <tr>
-                <th className="px-4 py-3 font-medium">Treatment Category</th>
-                <th className="px-4 py-3 font-medium">Starting Price</th>
-                <th className="px-4 py-3 font-medium">Maximum Price</th>
-                <th className="px-4 py-3 font-medium">Discount</th>
-              </tr>
-            </thead>
-            <tbody>
-              {page.pricing.rows.map((row) => (
-                <tr
-                  key={row.category}
-                  className="border-t border-cream-dark text-warm-gray"
-                >
-                  <td className="px-4 py-3 font-medium text-charcoal">
-                    {row.category}
-                  </td>
-                  <td className="px-4 py-3">{row.starting}</td>
-                  <td className="px-4 py-3">{row.maximum}</td>
-                  <td className="px-4 py-3">{row.discount}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section className="border-t border-cream-dark pt-10">
-        <h2 className="font-display text-2xl font-medium text-charcoal md:text-3xl">
           {page.lifestyle.title}
         </h2>
         <p className="mt-4 text-sm leading-relaxed text-warm-gray md:text-base">

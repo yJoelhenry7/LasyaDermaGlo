@@ -149,55 +149,6 @@ export const antiAgingPage = {
       subsections: [],
     },
   ],
-  pricing: {
-    title: "Anti Ageing Treatment Cost",
-    disclaimer:
-      "Prices are indicative and vary based on the treatment plan and number of sessions. Final pricing is shared after consultation. Discounts of up to 20% may apply on eligible packages.",
-    rows: [
-      {
-        category: "Q SWITCH",
-        starting: "₹1,500",
-        maximum: "₹1,05,600",
-        discount: "Up to 20%",
-      },
-      {
-        category: "PEEL",
-        starting: "₹2,000",
-        maximum: "₹91,500",
-        discount: "Up to 20%",
-      },
-      {
-        category: "INSTA SKIN BRILLIANCE (ISB)",
-        starting: "₹7,500",
-        maximum: "₹21,500",
-        discount: "Up to 20%",
-      },
-      {
-        category: "AFL (Aqua Fairness Luxe)",
-        starting: "₹4,800",
-        maximum: "₹27,300",
-        discount: "Up to 20%",
-      },
-      {
-        category: "Glutathione IV",
-        starting: "₹7,500",
-        maximum: "₹21,500",
-        discount: "Up to 20%",
-      },
-      {
-        category: "IV Drip",
-        starting: "₹29,999",
-        maximum: "₹2,79,999",
-        discount: "Up to 20%",
-      },
-      {
-        category: "MESO",
-        starting: "₹15,300",
-        maximum: "On consultation",
-        discount: "Up to 20%",
-      },
-    ],
-  },
   lifestyle: {
     title: "Lifestyle Tips for Maintaining Youthful and Firm Skin",
     intro:
@@ -340,11 +291,6 @@ export const antiAgingPage = {
       question: "Is there any downtime after Anti-Aging Treatments?",
       answer:
         "Downtime is typically minimal to none. Mild redness or swelling may occur and usually settles within a few hours to a few days. Post-care guidance helps ensure smooth recovery.",
-    },
-    {
-      question: "What is the cost of Anti-Aging Treatments at Derma Glo?",
-      answer:
-        "Cost varies depending on the type of treatment and the number of sessions required. During consultation, we assess your skin and share a personalized plan with estimated pricing.",
     },
     {
       question: "Can men undergo Anti-Aging Treatments?",
