@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | Derma Glo",
-};
+export const metadata: Metadata = createMetadata({
+  title: "Privacy Policy",
+  description:
+    "Read how Derma Glo collects, uses, and protects your personal information when you visit our website or clinic.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage() {
   return (
-    <div className="pt-36 pb-20">
+    <div className="pt-28 pb-20">
       <div className="mx-auto max-w-3xl px-6">
         <h1 className="font-display text-4xl font-medium">Privacy Policy</h1>
         <p className="mt-4 text-sm text-warm-gray">Last updated: March 2026</p>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft, Check } from "lucide-react";
-import { getServiceBySlug, services } from "@/data/site";
+import { getServiceBySlug, pageKeywords, services } from "@/data/site";
 import { antiAgingPage } from "@/data/antiAgingPage";
 import { acnePage } from "@/data/acnePage";
 import { laserHairRemovalPage } from "@/data/laserHairRemovalPage";
@@ -23,14 +23,15 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const service = getServiceBySlug(slug);
-  if (!service) return { title: "Not Found" };
+  if (!service) return createMetadata({ title: "Not Found", noIndex: true });
 
   if (slug === "anti-aging-solutions") {
     return createMetadata({
       title: "Anti Ageing Treatments",
       description:
-        "Advanced anti-aging treatments at Derma Glo for fine lines, wrinkles, sagging, and sun damage — with chemical peels, lasers, and personalized dermatology care.",
+        "Advanced anti-aging treatments at Derma Glo Rajahmundry for fine lines, wrinkles, sagging, and sun damage — with chemical peels, lasers, and personalized dermatology care.",
       path: `/services/${service.slug}`,
+      keywords: pageKeywords.antiAging,
     });
   }
 
@@ -38,8 +39,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return createMetadata({
       title: "Acne Scar Treatment",
       description:
-        "Acne and acne scar treatment at Derma Glo — peels, microneedling, laser, and subcision with personalized dermatology care for clearer skin.",
+        "Acne and acne scar treatment at Derma Glo Rajahmundry — peels, microneedling, laser, and subcision with personalized dermatology care for clearer skin.",
       path: `/services/${service.slug}`,
+      keywords: pageKeywords.acne,
     });
   }
 
@@ -47,8 +49,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return createMetadata({
       title: "Laser Hair Removal Treatment",
       description:
-        "Laser hair removal and reduction at Derma Glo with Nd-YAG and Diode lasers for face and body — sessions, benefits, and aftercare.",
+        "Laser hair removal and reduction at Derma Glo Rajahmundry with Nd-YAG and Diode lasers for face and body — sessions, benefits, and aftercare.",
       path: `/services/${service.slug}`,
+      keywords: pageKeywords.laser,
+    });
+  }
+
+  if (slug === "botox-fillers") {
+    return createMetadata({
+      title: "Botox & Fillers",
+      description:
+        "Botox and dermal fillers at Derma Glo Rajahmundry for natural wrinkle reduction, facial contouring, and refreshed volume.",
+      path: `/services/${service.slug}`,
+      keywords: pageKeywords.botox,
     });
   }
 
@@ -56,6 +69,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: service.title,
     description: service.description,
     path: `/services/${service.slug}`,
+    keywords: pageKeywords.services,
   });
 }
 
@@ -77,7 +91,7 @@ export default async function TreatmentPage({ params }: Props) {
         : null;
 
   return (
-    <article className="bg-cream pt-36 pb-20">
+    <article className="bg-cream pt-28 pb-20">
       <div className="mx-auto max-w-5xl px-6">
         <Link
           href="/services"

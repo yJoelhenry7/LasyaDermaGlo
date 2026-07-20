@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { conditions, services } from "@/data/site";
+import { conditions, pageKeywords, services } from "@/data/site";
 import { TreatmentCard, TreatmentsHeader } from "@/components/TreatmentCard";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = createMetadata({
   title: "Services",
   description:
-    "Explore our dermatology and aesthetic treatments including acne care, laser treatments, Botox, and anti-aging solutions.",
+    "Explore Derma Glo dermatology treatments in Rajahmundry — acne care, laser hair removal, Botox & fillers, and anti-aging solutions.",
   path: "/services",
+  keywords: pageKeywords.services,
 });
 
 export default function ServicesPage() {
   return (
-    <div className="bg-cream pt-36 pb-20">
+    <div className="bg-cream pt-28 pb-20">
       <div className="mx-auto max-w-5xl px-6">
         <TreatmentsHeader
           label="Services"

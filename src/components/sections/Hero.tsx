@@ -7,7 +7,7 @@ import { TreatmentArch } from "@/components/sections/TreatmentArch";
 
 export function Hero() {
   return (
-    <section className="px-3 pt-28 pb-3 sm:px-4 sm:pt-32 md:px-6">
+    <section className="px-3 pt-24 pb-3 sm:px-4 sm:pt-28 md:px-6">
       <div className="relative mx-auto min-h-[min(90vh,840px)] max-w-[1440px] overflow-hidden rounded-[2rem] sm:min-h-[min(88vh,900px)] sm:rounded-[2.5rem] md:min-h-[min(86vh,940px)]">
         {/* Background image */}
         <Image

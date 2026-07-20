@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
-import { siteConfig } from "@/data/site";
+import { pageKeywords, siteConfig } from "@/data/site";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact | Derma Glo",
-  description: "Get in touch with Derma Glo for appointments and inquiries.",
-};
+export const metadata: Metadata = createMetadata({
+  title: "Contact",
+  description:
+    "Contact Derma Glo in Rajahmundry — call, email, WhatsApp, or visit our clinic at Danivelpeta for dermatology appointments and inquiries.",
+  path: "/contact",
+  keywords: pageKeywords.contact,
+});
 
 export default function ContactPage() {
   return (
-    <div className="pt-36 pb-20">
+    <div className="pt-28 pb-20">
       <div className="mx-auto max-w-7xl px-6">
         <p className="text-sm font-medium tracking-widest text-sage uppercase">
           Contact
@@ -84,13 +88,14 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="mt-16 aspect-[21/9] overflow-hidden rounded-2xl bg-cream-dark">
+        <div className="mt-16 aspect-[16/9] overflow-hidden rounded-2xl bg-cream-dark sm:aspect-[21/9]">
           <iframe
-            title="Derma Glo location"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15225.0!2d81.78!3d17.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTfCsDAwJzAwLjAiTiA4McKwNDYnNDguMCJF!5e0!3m2!1sen!2sin!4v1"
+            title="Derma Glo clinic location on Google Maps"
+            src={siteConfig.mapsEmbedUrl}
             className="h-full w-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
           />
         </div>
       </div>

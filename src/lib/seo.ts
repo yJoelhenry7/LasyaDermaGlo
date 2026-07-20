@@ -6,22 +6,25 @@ export function createMetadata({
   description,
   path = "",
   keywords,
+  noIndex = false,
 }: {
   title?: string;
   description?: string;
   path?: string;
-  keywords?: string[];
+  keywords?: readonly string[] | string[];
+  noIndex?: boolean;
 }): Metadata {
   const pageTitle = title
     ? `${title} | ${siteConfig.name}`
-    : `${siteConfig.name} | Advanced Dermatology & Aesthetic Treatments`;
+    : `${siteConfig.name} | Dermatologist & Skin Clinic in Rajahmundry`;
   const pageDescription = description ?? siteConfig.description;
   const url = `${siteConfig.url}${path}`;
+  const keywordList = [...(keywords ?? seoKeywords)];
 
   return {
     title: pageTitle,
     description: pageDescription,
-    keywords: keywords ?? seoKeywords,
+    keywords: keywordList,
     metadataBase: new URL(siteConfig.url),
     alternates: { canonical: url },
     manifest: siteConfig.favicons.manifest,
@@ -49,7 +52,12 @@ export function createMetadata({
       siteName: siteConfig.name,
       title: pageTitle,
       description: pageDescription,
-      images: [{ url: siteConfig.logo, alt: siteConfig.name }],
+      images: [
+        {
+          url: siteConfig.logo,
+          alt: `${siteConfig.name} — dermatology clinic in Rajahmundry`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
@@ -57,9 +65,12 @@ export function createMetadata({
       description: pageDescription,
       images: [siteConfig.logo],
     },
-    robots: {
-      index: true,
-      follow: true,
+    robots: noIndex
+      ? { index: false, follow: false }
+      : { index: true, follow: true },
+    other: {
+      "geo.region": "IN-AP",
+      "geo.placename": "Rajahmundry",
     },
   };
 }

@@ -57,7 +57,10 @@ export function FAQ() {
                   <button
                     type="button"
                     onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                    className="flex w-full items-center justify-between py-5 text-left"
+                    aria-expanded={openIndex === i}
+                    aria-controls={`faq-panel-${i}`}
+                    id={`faq-button-${i}`}
+                    className="flex w-full items-center justify-between py-5 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage/40 focus-visible:ring-offset-2"
                   >
                     <span className="pr-4 text-sm font-medium text-charcoal md:text-base">
                       {faq.question}
@@ -66,11 +69,15 @@ export function FAQ() {
                       className={`h-5 w-5 shrink-0 text-warm-gray transition ${
                         openIndex === i ? "rotate-180" : ""
                       }`}
+                      aria-hidden
                     />
                   </button>
                   <AnimatePresence>
                     {openIndex === i && (
                       <motion.div
+                        id={`faq-panel-${i}`}
+                        role="region"
+                        aria-labelledby={`faq-button-${i}`}
                         initial={{ height: 0, opacity: 0 }}
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}

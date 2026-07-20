@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { blogPosts } from "@/data/site";
+import { blogPosts, pageKeywords } from "@/data/site";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Blog | Derma Glo",
-  description: "Helpful tips and expert advice on skin health and treatments.",
-};
+export const metadata: Metadata = createMetadata({
+  title: "Blog",
+  description:
+    "Skincare tips and expert dermatology advice from Derma Glo — acne, lasers, anti-aging, and healthy skin habits.",
+  path: "/blog",
+  keywords: pageKeywords.blog,
+});
 
 export default function BlogPage() {
   return (
-    <div className="pt-36 pb-20">
+    <div className="pt-28 pb-20">
       <div className="mx-auto max-w-7xl px-6">
         <p className="text-sm font-medium tracking-widest text-sage uppercase">
           Skin Insights

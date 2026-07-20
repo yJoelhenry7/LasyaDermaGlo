@@ -1,8 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { createMetadata } from "@/lib/seo";
+
+export const metadata: Metadata = createMetadata({
+  title: "Page Not Found",
+  description: "The page you are looking for could not be found on Derma Glo.",
+  path: "/404",
+  noIndex: true,
+});
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-[70vh] flex-col items-center justify-center px-6 pt-36 text-center">
+    <div className="flex min-h-[70vh] flex-col items-center justify-center px-6 pt-28 text-center">
       <p className="text-sm font-medium tracking-widest text-sage uppercase">
         404
       </p>
@@ -14,7 +23,7 @@ export default function NotFound() {
       </p>
       <Link
         href="/"
-        className="mt-8 rounded-full bg-sage-dark px-8 py-3 text-sm font-medium text-white hover:bg-charcoal"
+        className="mt-8 rounded-full bg-sage-dark px-8 py-3 text-sm font-medium text-white transition hover:bg-charcoal"
       >
         Back to home
       </Link>

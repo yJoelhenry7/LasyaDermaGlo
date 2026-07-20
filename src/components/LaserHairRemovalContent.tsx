@@ -124,10 +124,10 @@ export function LaserHairRemovalContent() {
               key={faq.question}
               className="group rounded-2xl border border-cream-dark bg-surface px-5 py-4"
             >
-              <summary className="cursor-pointer list-none text-sm font-medium text-charcoal md:text-base">
+              <summary className="cursor-pointer list-none text-sm font-medium text-charcoal focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sage/40 focus-visible:ring-offset-2 md:text-base">
                 <span className="flex items-start justify-between gap-4">
                   {faq.question}
-                  <span className="text-sage transition group-open:rotate-45">
+                  <span className="text-sage transition group-open:rotate-45" aria-hidden>
                     +
                   </span>
                 </span>

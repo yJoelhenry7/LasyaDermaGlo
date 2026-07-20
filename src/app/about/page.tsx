@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { doctor, stats } from "@/data/site";
+import { doctor, pageKeywords, stats } from "@/data/site";
+import { createMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About Us | Derma Glo",
+export const metadata: Metadata = createMetadata({
+  title: "About Us",
   description:
-    "Learn about Dr. G. Lasya Priya — dermatologist and cosmetologist in Rajahmundry offering skin, hair, nail, and aesthetic care.",
-};
+    "Meet Dr. G. Lasya Priya — dermatologist and cosmetologist at Derma Glo, Rajahmundry. MBBS, MD DVL with expertise in skin, hair, nail, and aesthetic care.",
+  path: "/about",
+  keywords: pageKeywords.about,
+});
 
 export default function AboutPage() {
   return (
-    <div className="pt-36 pb-20">
+    <div className="pt-28 pb-20">
       <div className="mx-auto max-w-7xl px-6">
         <p className="text-sm font-medium tracking-widest text-sage uppercase">
           About the Doctor

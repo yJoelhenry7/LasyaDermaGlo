@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-import { blogPosts } from "@/data/site";
+import { blogPosts, pageKeywords } from "@/data/site";
+import { createMetadata } from "@/lib/seo";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -16,8 +17,14 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
-  if (!post) return { title: "Not Found" };
-  return { title: `${post.title} | Derma Glo` };
+  if (!post) return createMetadata({ title: "Not Found", noIndex: true });
+
+  return createMetadata({
+    title: post.title,
+    description: `${post.title} — expert skincare insights from Derma Glo dermatology clinic in Rajahmundry.`,
+    path: `/blog/${post.slug}`,
+    keywords: [...pageKeywords.blog, post.category, post.title],
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {
@@ -27,7 +34,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   return (
-    <article className="pt-36 pb-20">
+    <article className="pt-28 pb-20">
       <div className="mx-auto max-w-3xl px-6">
         <Link
           href="/blog"
