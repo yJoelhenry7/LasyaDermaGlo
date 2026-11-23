@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Derma Glo",
   tagline: "Healthy, confident skin starts here",
   description:
-    "Derma Glo is a dermatology and aesthetic clinic in Rajahmundry offering acne care, laser hair removal, anti-aging treatments, Botox, fillers, and personalized skin health solutions.",
+    "Top-rated dermatologist in Rajahmundry. Expert skin care with 5-star reviews. Acne treatment, laser hair removal, anti-aging & Botox.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://dermaglo.com",
   logo: "/images/logo.png",
   favicons: {
@@ -17,7 +17,7 @@ export const siteConfig = {
   phone: "+91 90639 14333",
   email: "formoredermaglo@gmail.com",
   address:
-    "1st Floor, Opp. Fasttracks, DDC Road, Danivelpeta, Rajahmundry – 533 108",
+    "1st Floor, E Park Rd, opp. to Fastrack, Danavai Peta, Rajahmundry – 533 103",
   mapsUrl: "https://share.google/VpOcUAiWTsmwxNl2p",
   mapsEmbedUrl:
     "https://maps.google.com/maps?q=Derma%20Glo%2C%201st%20Floor%2C%20Opp.%20Fasttracks%2C%20DDC%20Road%2C%20Danivelpeta%2C%20Rajahmundry%20%E2%80%93%20533%20108&z=16&output=embed",

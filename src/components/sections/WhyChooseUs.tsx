@@ -235,11 +235,13 @@ export function WhyChooseUs() {
 
               <BentoCard className="flex flex-col" delay={0.24}>
                 <div className="border-b border-cream-dark p-5">
-                  <div className="flex items-center gap-1">
+                  <h3 className="sr-only">Patient Reviews</h3>
+                  <div className="flex items-center gap-1" aria-label="5 out of 5 stars">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <Star
                         key={i}
                         className="h-4 w-4 fill-[#fbbc04] text-[#fbbc04]"
+                        aria-hidden="true"
                       />
                     ))}
                   </div>
@@ -248,7 +250,7 @@ export function WhyChooseUs() {
                       5.0
                     </span>
                     <span className="pb-0.5 text-xs text-warm-gray md:text-sm">
-                      Google-rated care
+                      Google-rated dermatologist
                     </span>
                   </div>
                 </div>

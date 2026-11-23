@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { doctor, pageKeywords, stats } from "@/data/site";
 import { createMetadata } from "@/lib/seo";
+import { RelatedLinks } from "@/components/RelatedLinks";
 
 export const metadata: Metadata = createMetadata({
   title: "About Us",
@@ -113,6 +114,29 @@ export default function AboutPage() {
             </div>
           ))}
         </div>
+
+        <RelatedLinks
+          links={[
+            {
+              title: "Our Services",
+              description:
+                "Explore our comprehensive range of dermatology and aesthetic treatments.",
+              href: "/services",
+            },
+            {
+              title: "Book Appointment",
+              description:
+                "Schedule a consultation with Dr. Lasya Priya for personalized skin care.",
+              href: "/appointment",
+            },
+            {
+              title: "Contact Us",
+              description:
+                "Get in touch with our clinic — visit us in Rajahmundry or call ahead.",
+              href: "/contact",
+            },
+          ]}
+        />
 
         <div className="mt-24 rounded-2xl bg-sage/10 p-10 text-center md:p-16">
           <h2 className="font-display text-2xl font-medium md:text-3xl">

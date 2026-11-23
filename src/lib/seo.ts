@@ -26,7 +26,13 @@ export function createMetadata({
     description: pageDescription,
     keywords: keywordList,
     metadataBase: new URL(siteConfig.url),
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: {
+        "en-IN": url,
+        "x-default": url,
+      },
+    },
     manifest: siteConfig.favicons.manifest,
     icons: {
       icon: [

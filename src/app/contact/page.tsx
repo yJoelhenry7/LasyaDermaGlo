@@ -3,6 +3,7 @@ import { Phone, Mail, MapPin, Clock, Instagram } from "lucide-react";
 import { pageKeywords, siteConfig } from "@/data/site";
 import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 import { createMetadata } from "@/lib/seo";
+import { RelatedLinks } from "@/components/RelatedLinks";
 
 export const metadata: Metadata = createMetadata({
   title: "Contact",
@@ -98,6 +99,30 @@ export default function ContactPage() {
             allowFullScreen
           />
         </div>
+
+        <RelatedLinks
+          title="Explore More"
+          links={[
+            {
+              title: "About Dr. Lasya Priya",
+              description:
+                "Learn about our founder and her expertise in dermatology and cosmetology.",
+              href: "/about",
+            },
+            {
+              title: "Our Services",
+              description:
+                "Discover treatments for acne, anti-aging, laser hair removal, and more.",
+              href: "/services",
+            },
+            {
+              title: "Book Appointment",
+              description:
+                "Ready to visit? Schedule your consultation online.",
+              href: "/appointment",
+            },
+          ]}
+        />
       </div>
     </div>
   );

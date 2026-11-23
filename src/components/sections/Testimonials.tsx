@@ -34,10 +34,10 @@ export function Testimonials() {
             transition={{ duration: 0.5 }}
           >
             <p className="text-xs font-medium tracking-[0.2em] text-sage uppercase">
-              Google Reviews
+              Patient Reviews
             </p>
             <h2 className="font-display mt-2 text-3xl font-medium text-charcoal md:text-4xl">
-              What our patients say
+              Highly recommend this dermatologist
             </h2>
           </motion.div>
           <motion.div

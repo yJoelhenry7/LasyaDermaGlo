@@ -7,6 +7,7 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { CursorFollower } from "@/components/CursorFollower";
 import { JsonLd } from "@/components/JsonLd";
+import { Analytics } from "@/components/Analytics";
 import { createMetadata } from "@/lib/seo";
 import { pageKeywords } from "@/data/site";
 import "./globals.css";
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={playfair.variable}>
       <body className="font-sans antialiased">
+        <Analytics />
         <JsonLd />
         <a
           href="#main-content"
